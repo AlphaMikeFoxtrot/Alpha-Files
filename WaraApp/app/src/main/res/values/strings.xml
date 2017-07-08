@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Wara App</string>
+    <string name="suggestion">show suggestions</string>
+    <string name="add_wara">add today\'s wara</string>
+    <string name="log">view log</string>
+    <string name="credit">credits</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">JamatKhana</string>
+    <string name="addEntry">ADD TODAY\'S WARAS</string>
+    <string name="viewLog">VIEW LOG(30 DAYS)</string>
+    <string name="instructions">    TAP \"ADD ENTRY\" TO ADD TODAY\'S WARAS\n    TAP VIEW LOG TO SEE WARAS OF LAST 30 DAYS</string>
+
+</resources>

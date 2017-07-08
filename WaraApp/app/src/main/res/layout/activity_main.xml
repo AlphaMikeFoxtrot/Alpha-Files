@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anonymous.waraapp.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/linear1">
+
+            <Button
+                android:id="@+id/suggestion"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="@string/suggestion"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/black"
+                android:layout_margin="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="construction"
+                android:textAllCaps="true"/>
+
+            <Button
+                android:id="@+id/add_wara"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="construction"
+                android:text="@string/add_wara"
+                android:padding="8dp"
+                android:layout_margin="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/linear2">
+
+            <Button
+                android:id="@+id/log"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="@string/log"
+                android:padding="8dp"
+                android:onClick="construction"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:layout_margin="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"/>
+
+            <Button
+                android:id="@+id/credits"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="@string/credit"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/black"
+                android:layout_margin="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="toCredit"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

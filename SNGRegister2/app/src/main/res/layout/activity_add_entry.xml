@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anonymous.sngregister.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/nameET"
+                android:paddingRight="18dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/contactET"
+                android:paddingRight="18dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/addressET"
+                android:paddingRight="18dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="99dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="@string/insert"
+                android:layout_weight="1"/>
+
+            <Button
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="@string/update"
+                android:layout_weight="1"/>
+
+            <Button
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="@string/delete"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_entry);
+        setContentView(R.layout.activity_main);
 
         // EditText view class variables :
         EditText et_name = (EditText) findViewById(R.id.nameET);
@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
         // ****?**** //
         RequestQueue queue;
 
-        // url :
-        String url = "https://iamanonymous729.000webhostapp.com/testGet.php";
     }
 
     // creating 'send' function to interact with primary database :
 
     public void sendToDb(final String action){
+
+        String url = "https://iamanonymous729.000webhostapp.com/testGet.php";
 
         StringRequest stringReqObj = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -72,10 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
             }
-        }) {
-
-        }
+        });
         }
 
     }
-}

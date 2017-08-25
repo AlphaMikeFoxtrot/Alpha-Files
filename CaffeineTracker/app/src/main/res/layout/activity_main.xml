@@ -11,8 +11,8 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="COFFEE"
+        android:layout_height="150dp"
+        android:background="@drawable/coffee"
         android:id="@+id/coffee"
         android:padding="16dp"
         android:layout_marginBottom="12dp"/>
@@ -20,8 +20,8 @@
     <Button
         android:layout_below="@id/coffee"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="TEA"
+        android:layout_height="150dp"
+        android:background="@drawable/tea"
         android:id="@+id/tea"
         android:padding="16dp"/>
 

@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">CaffeineTracker</string>
+    <string name="app_name">Caffeine Tracker</string>
+    <string name="packets">NUMBER OF PACKETS USED</string>
+    <string name="caffeine">AMOUNT OF CAFFEINE</string>
+    <string name="deathAmt">AMOUNT LEFT TO REACH TODAY\'S LIMIT</string>
+    <string-array name="titles">
+
+        <item>BRU Small</item>
+        <item>BRU Medium</item>
+        <item>BRU Large</item>
+        <item>Nescafé Small</item>
+        <item>Nescafé Medium</item>
+        <item>Nescafé Large</item>
+
+    </string-array>
 </resources>

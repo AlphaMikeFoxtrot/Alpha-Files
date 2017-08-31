@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.anonymous.caffeinetracker.BruSmall">
+    tools:context="com.example.anonymous.caffeinetracker.aBru">
 
     <ImageView
         android:id="@+id/bruLogo"
@@ -13,7 +13,7 @@
         android:src="@drawable/brulogo"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="12dp"/>
 
     <TextView
@@ -21,7 +21,7 @@
         android:id="@+id/packets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="22dp"
+        android:layout_margin="15dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/packets"
@@ -31,7 +31,7 @@
 
     <LinearLayout
         android:id="@+id/linear1"
-        android:layout_margin="22dp"
+        android:layout_margin="15dp"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_below="@id/packets"
@@ -47,9 +47,13 @@
             android:background="@drawable/minus"/>
 
         <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"
             android:id="@+id/quantity"
             android:layout_width="75dp"
             android:layout_height="50dp"
+            android:text="0"
             android:layout_margin="4dp"/>
 
         <Button
@@ -67,46 +71,36 @@
         android:layout_height="75dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
+        android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/linear1">
 
         <TextView
-            android:layout_width="300dp"
-            android:gravity="center"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:textSize="25sp"
             android:text="@string/caffeine"/>
 
         <TextView
             android:id="@+id/cAmt"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.25"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear3"
-        android:layout_width="400dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="18dp"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/linear2">
-
-        <TextView
-            android:layout_width="300dp"
-            android:gravity="center"
             android:layout_height="match_parent"
-            android:textSize="19sp"
-            android:text="@string/deathAmt"/>
-
-        <TextView
-            android:id="@+id/toAmt"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.25"/>
+            android:layout_width="100dp"
+            android:layout_marginRight="12dp"
+            android:text="0 mg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40sp"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/backToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -17,9 +17,8 @@ public class Coffee extends AppCompatActivity implements AdapterView.OnItemClick
 
     ListView list;
     String[] coffeeList = {"BRU small", "BRU medium", "BRU large"};
-    Intent toBruS;
-    Intent toBruM;
-    Intent toBruL;
+    Intent toBru;
+    Intent toNewCoffee;
     float ratio = 3/5;
 
 
@@ -36,9 +35,8 @@ public class Coffee extends AppCompatActivity implements AdapterView.OnItemClick
 
         list.setOnItemClickListener(this);
 
-        toBruL = new Intent(this, BruLarge.class);
-        toBruM = new Intent(this, BruMedium.class);
-        toBruS = new Intent(this, BruSmall.class);
+        toBru = new Intent(this, aBru.class);
+        toNewCoffee = new Intent(this, coffee_scroll.class);
 
     }
 
@@ -48,21 +46,21 @@ public class Coffee extends AppCompatActivity implements AdapterView.OnItemClick
         switch (position){
 
             case 0:
-                toBruS.putExtra("MG", 2.9);
-                toBruS.putExtra("RATIO", ratio);
-                startActivity(toBruS);
+                toBru.putExtra("MG", 2.9);
+                toBru.putExtra("RATIO", ratio);
+                startActivity(toNewCoffee);
                 break;
 
             case 1:
-                toBruM.putExtra("MG", 5.6);
-                toBruS.putExtra("RATIO", ratio);
-                startActivity(toBruM);
+                toBru.putExtra("MG", 5.6);
+                toBru.putExtra("RATIO", ratio);
+                startActivity(toNewCoffee);
                 break;
 
             case 2:
-                toBruL.putExtra("MG", 9.6);
-                toBruS.putExtra("RATIO", ratio);
-                startActivity(toBruL);
+                toBru.putExtra("MG", 9.6);
+                toBru.putExtra("RATIO", ratio);
+                startActivity(toNewCoffee);
                 break;
 
         }

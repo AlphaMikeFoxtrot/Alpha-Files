@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.anonymous.caffeinetracker">
+    package="com.example.anonymous.caffeinetrackeriii">
 
     <application
         android:allowBackup="true"
@@ -16,13 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Coffee" />
-        <activity android:name=".Tea" />
-        <activity android:name=".aBru" />
-        <activity
-            android:name=".coffee_scroll"
-            android:label="@string/title_activity_coffee_scroll"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AddCup"></activity>
     </application>
 
 </manifest>

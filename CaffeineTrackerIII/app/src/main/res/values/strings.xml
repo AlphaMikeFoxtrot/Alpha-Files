@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">Caffeine Tracker III</string>
+
+    <string-array name="beverage">
+
+        <item>Type Of Beverage</item>
+        <item>Coffee</item>
+        <item>Tea</item>
+
+    </string-array>
+
+    <string-array name="coffee">
+
+        <item>Bru(RS.2)</item>
+        <item>Bru(RS.5)</item>
+        <item>Bru(RS.10)</item>
+
+    </string-array>
+
+</resources>

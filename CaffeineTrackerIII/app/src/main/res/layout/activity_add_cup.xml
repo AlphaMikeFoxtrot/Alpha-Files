@@ -38,7 +38,6 @@
             android:text="NUMBER OF PACKETS CONSUMED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/quantity"
             android:textSize="15sp"
             android:layout_weight="1"/>
 
@@ -48,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="0"
+            android:id="@+id/quantity"
             android:textSize="15sp"
             android:layout_weight="0.1"/>
 

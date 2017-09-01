@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import static com.example.anonymous.caffeinetrackeriii.R.array.coffee;
+
 public class Added extends AppCompatActivity {
 
     TextView summary;
@@ -20,31 +22,33 @@ public class Added extends AppCompatActivity {
         summary = (TextView) findViewById(R.id.summary);
         Intent intent = getIntent();
 
-        String packetType = intent.getStringExtra("PAKCET");
+        String packetType = intent.getStringExtra("PACKET");
         String packetQuantity = intent.getStringExtra("QUANTITY");
 
-        int mPacketQuantity = Integer.parseInt(packetQuantity);
+        int mPacketQuantity = Integer.parseInt(packetQuantity.toString());
 
         double coffeeAmt = 0;
+        String sum = " ";
 
-        if(packetType == "Bru(RS.2)"){
+        if(packetType.toString() == "Bru(RS.2)"){
 
-            coffeeAmt += 1.9*(60/100);
+            coffeeAmt += (1.9*60/100) * mPacketQuantity;
+            sum += "AMOUNT OF CAFFEINE CONSUMED = " + coffeeAmt;
+            summary.setText(" " + coffeeAmt);
 
-        } else if(packetType == "Bru(RS.5)"){
+        } else if(packetType.toString() == "Bru(RS.5)"){
 
-            coffeeAmt += 5.3*(60/100);
+            coffeeAmt += (5.3*60/100) * mPacketQuantity;
+            sum += "AMOUNT OF CAFFEINE CONSUMED = " + coffeeAmt;
+            summary.setText(" " + coffeeAmt);
 
         } else {
 
-            coffeeAmt += 8.9/(60/100);
+            coffeeAmt += (8.9*60/100) * mPacketQuantity;
+            sum += "AMOUNT OF CAFFEINE CONSUMED = " + coffeeAmt;
+            summary.setText(" " + coffeeAmt);
 
         }
-
-        double caffeineAmt = coffeeAmt * mPacketQuantity;
-
-        String sum = "AMOUNT OF CAFFEINE CONSUMED = " + caffeineAmt;
-        summary.setText(sum);
 
     }
 }

@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+import static android.R.attr.start;
 import static android.widget.ArrayAdapter.createFromResource;
 
 public class AddCup extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -31,7 +32,7 @@ public class AddCup extends AppCompatActivity implements AdapterView.OnItemSelec
         quantity = (EditText) findViewById(R.id.quantity);
         submit = (Button) findViewById(R.id.submit);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.beverage, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.beverage, R.layout.spinner_item);
 
         beverage_spinner.setAdapter(adapter);
         beverage_spinner.setOnItemSelectedListener(this);
@@ -39,7 +40,7 @@ public class AddCup extends AppCompatActivity implements AdapterView.OnItemSelec
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(beverage_spinner.getSelectedItem().equals("Type Of Beverage") && coffeeSpinner.getSelectedItem().equals("None")){
+                if(beverage_spinner.getSelectedItem().equals("Type Of Beverage")){
 
                     Toast.makeText(getApplicationContext(), "PLEASE MAKE SURE ALL THE REQUIRED FIELDS ARE FILLED!!!", Toast.LENGTH_SHORT).show();
 
@@ -48,9 +49,26 @@ public class AddCup extends AppCompatActivity implements AdapterView.OnItemSelec
                     String packetType = coffeeSpinner.getSelectedItem().toString();
                     String packetQuantity = quantity.getText().toString();
                     Intent toShowAdded = new Intent(getApplicationContext(), Added.class);
-                    toShowAdded.putExtra("PACKET", packetType);
-                    toShowAdded.putExtra("QUANTITY", packetQuantity);
+                    int mPackets = Integer.parseInt(packetQuantity);
+                    // TODO : add if_else statement to pass correct quantity to added activity
+                    if (packetType.equals("Bru(RS.2)")){
+
+                        double caffeineQuantity = (1.5 * 0.6 * mPackets);
+                        toShowAdded.putExtra("CAFFEINEamt", caffeineQuantity);
+
+                    } else if(packetType.equals("Bru(RS.5)")){
+
+                        double caffeineQuantity = (5.3 * 0.6 * mPackets);
+                        toShowAdded.putExtra("CAFFEINEamt", caffeineQuantity);
+
+                    } else if(packetType.equals("Bru(RS.10)")){
+
+                        double caffeineQuantity = (8.9 * 0.6 * mPackets);
+                        toShowAdded.putExtra("CAFFEINEamt", caffeineQuantity);
+
+                    }
                     startActivity(toShowAdded);
+
 
                 }
             }
@@ -64,7 +82,7 @@ public class AddCup extends AppCompatActivity implements AdapterView.OnItemSelec
         if (beverage_spinner.getSelectedItem().equals("Coffee")) {
 
             ArrayAdapter adapter2 = ArrayAdapter.createFromResource(this,
-                    R.array.coffee, android.R.layout.simple_spinner_item);
+                    R.array.coffee, R.layout.spinner_item);
             coffeeSpinner.setAdapter(adapter2);
 
         }

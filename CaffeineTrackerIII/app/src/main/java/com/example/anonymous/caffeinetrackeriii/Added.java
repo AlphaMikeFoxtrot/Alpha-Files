@@ -22,33 +22,10 @@ public class Added extends AppCompatActivity {
         summary = (TextView) findViewById(R.id.summary);
         Intent intent = getIntent();
 
-        String packetType = intent.getStringExtra("PACKET");
-        String packetQuantity = intent.getStringExtra("QUANTITY");
+        float caffeineAmt = (float) intent.getDoubleExtra("CAFFEINEamt", 0);
 
-        int mPacketQuantity = Integer.parseInt(packetQuantity.toString());
+        summary.setText(" " + caffeineAmt);
 
-        double coffeeAmt = 0;
-        String sum = " ";
-
-        if(packetType.toString() == "Bru(RS.2)"){
-
-            coffeeAmt += (1.9*60/100) * mPacketQuantity;
-            sum += "AMOUNT OF CAFFEINE CONSUMED = " + coffeeAmt;
-            summary.setText(" " + coffeeAmt);
-
-        } else if(packetType.toString() == "Bru(RS.5)"){
-
-            coffeeAmt += (5.3*60/100) * mPacketQuantity;
-            sum += "AMOUNT OF CAFFEINE CONSUMED = " + coffeeAmt;
-            summary.setText(" " + coffeeAmt);
-
-        } else {
-
-            coffeeAmt += (8.9*60/100) * mPacketQuantity;
-            sum += "AMOUNT OF CAFFEINE CONSUMED = " + coffeeAmt;
-            summary.setText(" " + coffeeAmt);
-
-        }
 
     }
 }

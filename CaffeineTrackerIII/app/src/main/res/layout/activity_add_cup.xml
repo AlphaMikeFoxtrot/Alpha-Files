@@ -37,7 +37,7 @@
             android:text=" NUMBER OF PACKETS CONSUMED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:layout_weight="1"/>
 
         <EditText
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:hint="0"
             android:id="@+id/quantity"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:layout_weight="0.1"/>
 
     </LinearLayout>
